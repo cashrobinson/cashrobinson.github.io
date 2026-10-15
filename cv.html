@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash Robinson — CV</title>
+<meta name="description" content="CV of Cash Robinson, Berlin-based filmmaker and producer. Founder of Doodlebug Productions.">
+<meta property="og:title" content="Cash Robinson — CV">
+<meta property="og:description" content="Berlin-based filmmaker and producer. Two independently produced feature films, from development through delivery.">
+<meta property="og:image" content="headshot.jpg">
+<style>
+  @font-face { font-family: "Montserrat"; src: url("fonts/Montserrat.ttf") format("truetype"); font-weight: 100 900; font-display: swap; }
+  @font-face { font-family: "Share Tech Mono"; src: url("fonts/ShareTechMono.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+
+  :root {
+    --blue: #4a51ff;
+    --key: #1900f1;
+    --white: #f4fbff;
+    --soft: rgba(244, 251, 255, 0.78);
+    --line: rgba(244, 251, 255, 0.55);
+    --max: 1040px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--blue);
+    color: var(--white);
+    font-family: "Montserrat", system-ui, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 24px 0; position: relative; }
+
+  /* ---------- Keycaps ---------- */
+  .keys { display: inline-flex; text-decoration: none; }
+  .keys span {
+    font-family: "Share Tech Mono", ui-monospace, monospace;
+    text-transform: uppercase;
+    display: inline-grid; place-items: center;
+    width: 1.55em; height: 1.55em;
+    background: var(--key);
+    border: 2px solid var(--white);
+    border-radius: 0.38em;
+    margin-left: -2px;
+    line-height: 1;
+  }
+  .keys span:first-of-type { margin-left: 0; }
+  a.keys:hover span, a.keys:focus-visible span { background: var(--white); color: var(--key); }
+  a.keys:focus-visible { outline: none; }
+
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- Top nav ---------- */
+  nav.top { display: flex; flex-wrap: wrap; gap: 10px 14px; font-size: 15px; margin-bottom: 36px; }
+  nav.top .keys[aria-current="page"] span { background: var(--white); color: var(--key); }
+
+  /* ---------- Header ---------- */
+  .mast { display: flex; align-items: flex-end; gap: 0 14px; }
+  h1 {
+    font-weight: 800;
+    font-size: clamp(40px, 7.4vw, 94px);
+    white-space: nowrap;
+    line-height: 0.92;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+  .suffix { font-weight: 700; font-size: clamp(18px, 2.6vw, 28px); line-height: 1.1; padding-bottom: 6px; }
+  .roles {
+    display: flex; flex-wrap: wrap; gap: 6px 48px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em;
+    font-size: clamp(16px, 2.2vw, 24px);
+    margin: 0 0 22px 2px;
+  }
+
+  /* ---------- Intro: cut-out + speech bubble ---------- */
+  .intro { display: grid; grid-template-columns: 200px 1fr; gap: 36px; align-items: center; margin-top: 26px; }
+  .figure { position: relative; padding-top: 22px; }
+  .intro .cutout { width: 100%; display: block; }
+  .hat { position: absolute; width: 58%; left: 3%; top: 0; transform: rotate(-6deg); }
+  .bubble {
+    border: 3px solid var(--line);
+    border-radius: 22px;
+    padding: 22px 26px;
+  }
+  .bubble p { font-weight: 600; font-size: 18px; line-height: 1.5; }
+  .contact { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 8px 22px; font-weight: 700; }
+  .contact a { text-decoration: none; border-bottom: 2px solid var(--white); }
+
+  /* ---------- Sections ---------- */
+  main section { margin-top: 64px; }
+  h2 { font-size: clamp(17px, 2.4vw, 22px); font-weight: 400; margin-bottom: 22px; }
+  .card { border: 3px solid var(--line); border-radius: 22px; padding: 24px 26px; }
+  h3 { font-weight: 800; text-transform: uppercase; font-size: 19px; line-height: 1.25; letter-spacing: 0.01em; }
+  .meta { color: var(--soft); font-size: 15px; }
+  .role { font-weight: 700; }
+
+  /* Experience */
+  .job { display: grid; grid-template-columns: 230px 1fr; gap: 24px; }
+  .job .logo { width: 70px; margin-top: 14px; filter: invert(1) brightness(1.1); }
+  .job .title { font-weight: 700; margin-bottom: 8px; }
+  .job ul { list-style: none; }
+  .job li { padding: 3px 0 3px 22px; position: relative; }
+  .job li::before { content: "→"; position: absolute; left: 0; font-weight: 700; }
+
+  /* Films */
+  .film + .film { margin-top: 22px; }
+  .film-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; align-items: baseline; }
+  .film-body { display: grid; grid-template-columns: 340px 1fr; gap: 26px; margin-top: 16px; }
+  .film-body.no-img { grid-template-columns: 1fr; }
+  .film figure img { width: 100%; display: block; border: 3px solid var(--white); border-radius: 14px; }
+  .film figcaption { font-size: 14px; margin-top: 10px; color: var(--soft); }
+  .film figcaption b { color: var(--white); }
+  table.fest { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.fest td { padding: 7px 0; border-bottom: 1px solid rgba(244,251,255,0.28); vertical-align: middle; }
+  table.fest tr:last-child td { border-bottom: 0; }
+  table.fest td:first-child { font-weight: 700; padding-right: 12px; }
+  table.fest td.award { text-align: right; padding-right: 14px; }
+  table.fest td.yr { text-align: right; width: 3.4em; font-variant-numeric: tabular-nums; color: var(--soft); }
+  .pill {
+    display: inline-block; white-space: nowrap;
+    font-family: "Share Tech Mono", ui-monospace, monospace;
+    text-transform: uppercase; font-size: 13px; letter-spacing: 0.04em;
+    background: var(--key); border: 2px solid var(--white); border-radius: 8px;
+    padding: 1px 8px;
+  }
+
+  /* Education */
+  .entries { display: grid; gap: 14px; }
+  .entries .row { display: grid; grid-template-columns: 1fr auto; gap: 2px 20px; }
+  .entries .row b { font-weight: 800; text-transform: uppercase; font-size: 15px; letter-spacing: 0.01em; }
+  .entries .row .yr { color: var(--soft); font-variant-numeric: tabular-nums; text-align: right; }
+  .entries .row .desc { grid-column: 1 / -1; color: var(--soft); }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 36px; }
+  .skills h3 { font-size: 15px; margin-bottom: 8px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { border: 2px solid var(--line); border-radius: 999px; padding: 2px 11px; font-size: 14px; font-weight: 600; }
+
+  /* Footer */
+  footer { position: relative; text-align: center; padding: 90px 0 36px; font-weight: 700; font-size: 14px; letter-spacing: 0.04em; }
+  footer .print { margin-bottom: 14px; font-size: 14px; }
+  footer button.keys { background: none; border: 0; color: inherit; cursor: pointer; font: inherit; }
+  footer button.keys:hover span, footer button.keys:focus-visible span { background: var(--white); color: var(--key); }
+  .puppet { position: absolute; right: -10px; bottom: 0; width: 170px; pointer-events: none; }
+  .thought { position: absolute; right: 168px; bottom: 116px; width: 60px; height: 60px; pointer-events: none; }
+  .thought i { position: absolute; border: 3px solid var(--line); border-radius: 50%; }
+  .thought i:nth-child(1) { width: 20px; height: 20px; left: 0; top: 0; }
+  .thought i:nth-child(2) { width: 15px; height: 15px; left: 22px; top: 20px; }
+  .thought i:nth-child(3) { width: 11px; height: 11px; left: 40px; top: 38px; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 760px) {
+    .wrap { padding: 20px 16px 0; }
+    nav.top { font-size: 13px; gap: 8px 10px; margin-bottom: 26px; }
+    .roles { gap: 4px 22px; }
+    h1 { white-space: normal; }
+    .mast { flex-wrap: wrap; }
+    .intro { grid-template-columns: 130px 1fr; gap: 14px; margin-top: 18px; }
+    .roles { margin-bottom: 14px; }
+    .bubble { padding: 16px 18px; margin-bottom: 18px; }
+    .bubble p { font-size: 15px; }
+    .card { padding: 18px; border-radius: 18px; }
+    .job, .film-body, .skills { grid-template-columns: 1fr; gap: 14px; }
+    .job .logo { width: 48px; }
+    table.fest td.award { text-align: left; }
+    main section { margin-top: 44px; }
+    .puppet { width: 110px; }
+    .thought { right: 100px; bottom: 74px; transform: scale(0.7); }
+  }
+  @media (max-width: 480px) {
+    .intro { grid-template-columns: 1fr; }
+    .figure { width: 170px; order: 2; margin: 0 auto -6px; }
+    .bubble { margin-bottom: 0; }
+    table.fest tr { display: grid; grid-template-columns: 1fr auto; }
+    table.fest td.award { grid-column: 1; grid-row: 2; padding: 0 0 8px; }
+    table.fest td.award:empty { display: none; }
+    table.fest td { border-bottom: 0; }
+    table.fest tr { border-bottom: 1px solid rgba(244,251,255,0.28); }
+  }
+
+  /* ---------- Print: clean black-on-white ---------- */
+  @media print {
+    :root { --white: #000; --soft: #444; --line: #000; --key: #fff; }
+    @page { size: A4; margin: 12mm; }
+    body { background: #fff; color: #000; }
+    .wrap { zoom: 0.66; max-width: none; padding: 0; }
+    nav.top, .figure, .puppet, .thought, footer .print { display: none; }
+    .intro { grid-template-columns: 1fr; }
+    .bubble, .card { border-width: 1.5px; padding: 10px 14px; }
+    main section { margin-top: 26px; }
+    .card { break-inside: avoid; }
+    .job .logo { filter: none; }
+    .film figure img { border-width: 1px; }
+    footer { padding: 16px 0 0; }
+    h1 { font-size: 80px; }
+    header { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="top" aria-label="Site">
+    <a class="keys" href="index.html">Home</a>
+    <a class="keys" href="film.html">Film</a>
+    <a class="keys" href="photo.html">Photo</a>
+    <a class="keys" href="blog.html">Blog</a>
+    <a class="keys" href="acting.html">Acting</a>
+    <a class="keys" href="about.html">About</a>
+    <a class="keys" href="cv.html" aria-current="page">CV</a>
+  </nav>
+
+  <header>
+    <div class="mast">
+      <h1>Cash Robinson</h1>
+      <div class="suffix">.blog<br>/cv</div>
+    </div>
+    <div class="intro">
+      <div class="figure">
+        <img class="cutout" src="stage-cutout.png" alt="Cash Robinson speaking into a microphone">
+        <img class="hat" src="hat.png" alt="">
+      </div>
+      <div class="side">
+      <div class="roles"><span>Producer</span><span>Director</span><span>Writer</span></div>
+      <div class="bubble">
+        <p>Berlin-based filmmaker and producer. Independently produced two feature films from development through delivery, experienced in shoot planning, post-production workflow and managing partners across countries. Fast, clear communicator who values timeliness, thoroughness, and creative problem solving.</p>
+        <div class="contact">
+          <a href="mailto:cashrobinsonfilm@gmail.com">cashrobinsonfilm@gmail.com</a>
+          <span>Berlin</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2 class="keys">Experience</h2>
+      <div class="card job">
+        <div>
+          <h3>Doodlebug Productions</h3>
+          <div class="meta">Est. 2022 · Atlanta, GA, USA</div>
+          <img class="logo" src="doodlebug-logo.png" alt="">
+        </div>
+        <div>
+          <p class="title">Founder, independent production company · 2022 – present</p>
+          <ul>
+            <li>Planned and coordinated shoots: scheduling, locations, crew and rentals</li>
+            <li>Logged and organized footage; cut assemblies and rough cuts</li>
+            <li>Managed budgets and day-to-day production administration</li>
+            <li>Coordinated a Dutch co-production and UK sales relationship</li>
+            <li>Ran festival submissions and press communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="keys">Films</h2>
+
+      <article class="card film">
+        <div class="film-head">
+          <h3>Nobody Wants to Be Here, Nobody Wants to Leave <span class="meta">(2025)</span></h3>
+          <span class="role">Producer/Director</span>
+        </div>
+        <div class="meta">Feature dark comedy drama · Digital · 105 min · $400k budget · Co-production with Filos Producties (Netherlands)</div>
+        <div class="film-body">
+          <figure>
+            <img src="still-nobody-wants.jpg" alt="Still from Nobody Wants to Be Here, Nobody Wants to Leave">
+            <figcaption>World sales: <b>Screenbound International Pictures Ltd (UK)</b></figcaption>
+          </figure>
+          <table class="fest">
+            <tr><td>Austin Film Festival</td><td class="award"><span class="pill">World Premiere</span></td><td class="yr">2025</td></tr>
+            <tr><td>New Orleans IFF</td><td class="award"></td><td class="yr">2025</td></tr>
+            <tr><td>Bahamas IFF</td><td class="award"><span class="pill">Jury Prize Winner</span></td><td class="yr">2025</td></tr>
+            <tr><td>Saimaa Finland IFF</td><td class="award"></td><td class="yr">2026</td></tr>
+            <tr><td>Mystic Film Festival</td><td class="award"><span class="pill">Best Actress</span></td><td class="yr">2026</td></tr>
+            <tr><td>Rome Georgia IFF</td><td class="award"></td><td class="yr">2026</td></tr>
+          </table>
+        </div>
+      </article>
+
+      <article class="card film">
+        <div class="film-head">
+          <h3>Uncle Honker <span class="meta">(2022)</span></h3>
+          <span class="role">Producer/Writer/Director</span>
+        </div>
+        <div class="meta">Feature road drama · VHS / MiniDV / 8mm · 99 min</div>
+        <div class="film-body no-img">
+          <table class="fest">
+            <tr><td>Festival de Cinema na Casa Portugal</td><td class="award"><span class="pill">Audience Favorite</span></td><td class="yr">2022</td></tr>
+            <tr><td>Anatolia International Film Festival</td><td class="award"></td><td class="yr">2022</td></tr>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2 class="keys">Education</h2>
+      <div class="card entries">
+        <div class="row"><b>MFA, Screenwriting · University of Georgia, USA</b><span class="yr">2025</span></div>
+        <div class="row"><b>BA, Film Studies · University of Georgia, USA</b><span class="yr">2022</span></div>
+        <div class="row"><b>Scrawls on Cinema · Lead Content Writer</b><span class="yr">2020–22</span>
+          <span class="desc">Lead contributor to weekly online publications about topics in international cinema</span></div>
+        <div class="row"><b>University of Georgia Film Club · President</b><span class="yr">2019–22</span>
+          <span class="desc">Led weekly community discussions of international cinema and secured meeting/event locations</span></div>
+        <div class="row"><b>Georgia Film Academy Production Certification</b><span class="yr">2019</span></div>
+        <div class="row"><b>Avid Media Composer Certification</b><span class="yr">2019</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="keys">Skills</h2>
+      <div class="card skills">
+        <div><h3>Production</h3><div class="tags"><span>Pre-production, shoot &amp; post coordination</span><span>Budgeting &amp; scheduling</span><span>Call sheets</span><span>Equipment rentals</span><span>Festival submissions</span></div></div>
+        <div><h3>Post</h3><div class="tags"><span>DaVinci Resolve</span><span>Premiere Pro</span><span>Avid Media Composer (certified)</span><span>Footage management</span><span>Rough cuts</span><span>Subtitles</span></div></div>
+        <div><h3>Tools</h3><div class="tags"><span>Google Workspace</span><span>Notion</span><span>Figma</span><span>Canva</span><span>AI tools for production workflows</span></div></div>
+        <div><h3>Writing</h3><div class="tags"><span>Copywriting &amp; editing</span><span>Script development</span><span>Scriptwriting</span></div></div>
+        <div><h3>Languages</h3><div class="tags"><span>English C2</span><span>French B2</span><span>German B1</span><span>Spanish A2</span></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="print"><button class="keys" type="button" onclick="window.print()">PDF</button></div>
+    © MMXXVI
+    <span class="thought" aria-hidden="true"><i></i><i></i><i></i></span>
+    <img class="puppet" src="sock-puppet.png" alt="">
+  </footer>
+
+</div>
+<script>
+  // Split keycap labels into one key per letter
+  document.querySelectorAll('.keys').forEach(function (el) {
+    var text = el.textContent.trim();
+    el.textContent = '';
+    var label = document.createElement('i');
+    label.className = 'sr';
+    label.textContent = text;
+    el.appendChild(label);
+    Array.from(text).forEach(function (ch) {
+      var s = document.createElement('span');
+      s.setAttribute('aria-hidden', 'true');
+      s.textContent = ch;
+      el.appendChild(s);
+    });
+  });
+</script>
+</body>
+</html>
