@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cash Robinson — Filmmaker &amp; Producer</title>
+<meta name="description" content="Cash Robinson, Berlin-based filmmaker and producer. Founder of Doodlebug Productions. Producer/Director of Nobody Wants to Be Here, Nobody Wants to Leave (2025).">
+<meta property="og:title" content="Cash Robinson — Filmmaker & Producer">
+<meta property="og:description" content="Berlin-based filmmaker and producer. Two independently produced feature films, from development through delivery.">
+<meta property="og:image" content="headshot.jpg">
+<meta property="og:type" content="profile">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Archivo+Black&family=Jost:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0d0d0d;
+    --paper: #ffffff;
+    --muted: #555;
+    --rule: #0d0d0d;
+    --max: 920px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Jost", "Futura", system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 40px 24px 64px; }
+
+  /* Header */
+  h1 {
+    font-family: "Rubik Mono One", "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-size: clamp(34px, 8.6vw, 76px);
+    line-height: 1;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .intro {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .intro img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    display: block;
+  }
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 15px;
+    padding-bottom: 6px;
+  }
+  .contact a { text-decoration: none; border-bottom: 2px solid var(--ink); }
+  .bar {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "Archivo Black", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-align: right;
+    padding: 4px 10px;
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+  .summary { font-size: 19px; line-height: 1.45; }
+
+  /* Sections */
+  section { margin-top: 44px; }
+  h2 {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 18px;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .meta { color: var(--muted); font-size: 15px; }
+  .role { font-style: italic; }
+
+  /* Experience */
+  .job {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 24px;
+  }
+  .job .logo { width: 64px; margin-top: 10px; }
+  .job ul { list-style: none; }
+  .job li { padding: 3px 0 3px 18px; position: relative; }
+  .job li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 8px; height: 2px; background: var(--ink); }
+  .job .title { font-weight: 700; margin-bottom: 6px; }
+
+  /* Films */
+  .film { padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid #ddd; }
+  .film:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+  .film-head {
+    display: flex; justify-content: space-between; align-items: baseline;
+    flex-wrap: wrap; gap: 4px 16px; margin-bottom: 4px;
+  }
+  .film-body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    margin-top: 14px;
+  }
+  .film-body.no-img { grid-template-columns: 1fr; }
+  .film figure img { width: 100%; display: block; }
+  .film figcaption { font-size: 14px; margin-top: 8px; color: var(--muted); }
+  .film figcaption em { color: var(--ink); }
+  table.fest { width: 100%; border-collapse: collapse; font-size: 15px; }
+  table.fest td { padding: 5px 0; border-bottom: 1px solid #eee; vertical-align: top; }
+  table.fest td:first-child { font-weight: 700; padding-right: 12px; }
+  table.fest td.award { text-transform: uppercase; letter-spacing: 0.06em; font-size: 13px; padding-right: 12px; text-align: right; }
+  table.fest td.yr { text-align: right; width: 3.5em; font-variant-numeric: tabular-nums; }
+
+  /* Education & other */
+  .entries > div { margin-bottom: 14px; }
+  .entries h3 { display: inline; font-size: 14px; }
+  .entries p.desc { margin-top: 2px; padding-left: 24px; color: #333; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 40px; }
+  .skills h3 { font-size: 14px; margin-bottom: 4px; }
+  .skills p { font-size: 16px; }
+
+  footer { margin-top: 56px; padding-top: 16px; border-top: 2px solid var(--ink); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+
+  @media (max-width: 680px) {
+    .wrap { padding: 28px 16px 48px; }
+    .intro { grid-template-columns: 110px 1fr; gap: 16px; }
+    .summary { font-size: 16px; }
+    .contact { font-size: 13px; }
+    .job, .film-body, .skills { grid-template-columns: 1fr; gap: 12px; }
+    .job .logo { width: 44px; }
+    table.fest td.award { text-align: left; }
+  }
+  @media (max-width: 420px) {
+    .intro { grid-template-columns: 1fr; }
+    .intro img { width: 140px; }
+  }
+  @media print {
+    body { font-size: 12px; }
+    .wrap { padding: 0; }
+    section { margin-top: 20px; break-inside: avoid; }
+    .film { break-inside: avoid; }
+    footer { display: none; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <header>
+    <h1>Cash Robinson</h1>
+    <div class="intro">
+      <img src="headshot.jpg" alt="Cash Robinson at Austin Film Festival">
+      <div>
+        <div class="contact">
+          <a href="mailto:cashrobinsonfilm@gmail.com">cashrobinsonfilm@gmail.com</a>
+        </div>
+        <div class="bar">Berlin</div>
+        <p class="summary">Berlin-based filmmaker and producer. Independently produced two feature films from development through delivery, experienced in shoot planning, post-production workflow and managing partners across countries. Fast, clear communicator who values timeliness, thoroughness, and creative problem solving.</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="job">
+      <div>
+        <h3>Doodlebug Productions</h3>
+        <div class="meta">Est. 2022 · Atlanta, GA, USA</div>
+        <img class="logo" src="doodlebug-logo.png" alt="">
+      </div>
+      <div>
+        <p class="title">Founder, independent production company · 2022 – present</p>
+        <ul>
+          <li>Planned and coordinated shoots: scheduling, locations, crew and rentals</li>
+          <li>Logged and organized footage; cut assemblies and rough cuts</li>
+          <li>Managed budgets and day-to-day production administration</li>
+          <li>Coordinated a Dutch co-production and UK sales relationship</li>
+          <li>Ran festival submissions and press communication</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Filmography</h2>
+
+    <article class="film">
+      <div class="film-head">
+        <h3>Nobody Wants to Be Here, Nobody Wants to Leave <span class="meta">(2025)</span></h3>
+        <span class="role">Producer/Director · feature dark comedy drama</span>
+      </div>
+      <div class="meta">Digital · 105 min · $400k budget · Co-production with Filos Producties (Netherlands)</div>
+      <div class="film-body">
+        <figure>
+          <img src="still-nobody-wants.jpg" alt="Still from Nobody Wants to Be Here, Nobody Wants to Leave">
+          <figcaption>World Sales: <em>Screenbound International Pictures Ltd (UK)</em></figcaption>
+        </figure>
+        <table class="fest">
+          <tr><td>Austin Film Festival</td><td class="award">World Premiere</td><td class="yr">2025</td></tr>
+          <tr><td>New Orleans IFF</td><td class="award"></td><td class="yr">2025</td></tr>
+          <tr><td>Bahamas IFF</td><td class="award">Jury Prize Winner</td><td class="yr">2025</td></tr>
+          <tr><td>Saimaa Finland IFF</td><td class="award"></td><td class="yr">2026</td></tr>
+          <tr><td>Mystic Film Festival</td><td class="award">Best Actress</td><td class="yr">2026</td></tr>
+          <tr><td>Rome Georgia IFF</td><td class="award"></td><td class="yr">2026</td></tr>
+        </table>
+      </div>
+    </article>
+
+    <article class="film">
+      <div class="film-head">
+        <h3>Uncle Honker <span class="meta">(2022)</span></h3>
+        <span class="role">Producer/Writer/Director · feature road drama</span>
+      </div>
+      <div class="meta">VHS / MiniDV / 8mm · 99 min</div>
+      <div class="film-body no-img">
+        <table class="fest">
+          <tr><td>Festival de Cinema na Casa Portugal</td><td class="award">Audience Favorite Award</td><td class="yr">2022</td></tr>
+          <tr><td>Anatolia International Film Festival</td><td class="award"></td><td class="yr">2022</td></tr>
+        </table>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Training, Education, Other Experience</h2>
+    <div class="entries">
+      <div><h3>MFA, Screenwriting</h3> 2025, University of Georgia, USA</div>
+      <div><h3>BA, Film Studies</h3> 2022, University of Georgia, USA</div>
+      <div>
+        <h3>Scrawls on Cinema</h3> Lead Content Writer, 2020 – 2022
+        <p class="desc">Lead contributor to weekly online publications about topics in international cinema</p>
+      </div>
+      <div>
+        <h3>University of Georgia Film Club</h3> President, 2019 – 2022
+        <p class="desc">Led weekly community discussions of international cinema and secured meeting/event locations</p>
+      </div>
+      <div><h3>Georgia Film Academy Production Certification</h3> 2019</div>
+      <div><h3>Avid Media Composer Certification</h3> 2019</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Production</h3><p>Pre-production, shoot &amp; post coordination · Budgeting &amp; scheduling · Call sheets · Equipment rentals · Festival submissions</p></div>
+      <div><h3>Post</h3><p>DaVinci Resolve · Premiere Pro · Avid Media Composer (certified) · Footage management · Rough cuts · Subtitles</p></div>
+      <div><h3>Tools</h3><p>Google Workspace · Notion · Figma · Canva · AI tools for production workflows</p></div>
+      <div><h3>Writing</h3><p>Copywriting &amp; editing · Script development · Scriptwriting</p></div>
+      <div><h3>Languages</h3><p>English (C2) · French (B2) · German (B1) · Spanish (A2)</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Cash Robinson · Berlin</span>
+    <a href="mailto:cashrobinsonfilm@gmail.com">cashrobinsonfilm@gmail.com</a>
+  </footer>
+
+</main>
+</body>
+</html>
